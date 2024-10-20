@@ -1,7 +1,8 @@
 PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX dbp: <http://dbpedia.org/property/>
 
-SELECT ?name (COUNT(?person) AS ?count) WHERE {
+SELECT ?name COUNT(?person)
+WHERE {
   ?person a dbo:Person .
   ?person dbo:award dbr:Nobel_Prize_in_Physics .
   ?person dbo:almaMater ?university .
