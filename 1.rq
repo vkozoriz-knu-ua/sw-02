@@ -1,0 +1,11 @@
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?country ?population
+WHERE {
+  ?country a dbo:Country .
+  ?country dbo:populationTotal ?population .
+  ?country dct:subject dbc:Eastern_European_countries. 
+}
+ORDER BY DESC(?population)
